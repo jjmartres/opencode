@@ -1,0 +1,39 @@
+{
+  "repositories": [
+    {
+      "name": "gitlab-mcp",
+      "url": "https://gitlab.com/fforster/gitlab-mcp.git",
+      "branch": "main",
+      "image": "gitlab-mcp",
+      "description": "A Model Context Protocol (MCP) server for GitLab"
+    },
+    {
+      "name": "mcp-server-docker",
+      "url": "https://github.com/ckreiling/mcp-server-docker",
+      "branch": "main",
+      "image": "mcp-server-docker",
+      "description": "Docker MCP server for container management"
+    },
+    {
+      "name": "mcp-server-kubernetes",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes",
+      "branch": "main",
+      "image": "mcp-server-kubernetes",
+      "description": "MCP Server for kubernetes management commands"
+    },
+    {
+      "name": "terraform-mcp-server",
+      "url": "https://github.com/hashicorp/terraform-mcp-server",
+      "branch": "main",
+      "image": "terraform-mcp-server",
+      "description": "The Terraform MCP Server provides seamless integration with Terraform ecosystem, enabling advanced automation and interaction capabilities for Infrastructure as Code (IaC) development."
+    },
+    {
+      "name": "mcp-server-atlassian",
+      "url": "https://github.com/sooperset/mcp-atlassian",
+      "branch": "main",
+      "image": "mcp-server-atlassian",
+      "description": "MCP server for Atlassian tools (Confluence, Jira)"
+    }
+  ]
+}
