@@ -1,6 +1,5 @@
 <div align="center">
-  <h1>Opencode configuration</h1>
-  <a href="https://opencode.ai"><img src="https://opencode.ai/_build/assets/preview-opencode-wordmark-dark-tZ1Y3VXe.png" alt="Opencode logo" width="400"/></a>
+  <a href="https://opencode.ai"><img src="opencode-logo.png" alt="Opencode logo"></a>
 </div>
 
 <p align="center">

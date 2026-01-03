@@ -182,48 +182,6 @@ All code changes happen through pull requests:
    git push origin feature/your-feature-name
    ```
 
-2. **Set up your development environment**
-
-   ```bash
-   make install
-   make install-hooks  # Install pre-commit hooks
-   ```
-
-3. **Make your changes**
-   - Add your configurations
-   - Update documentation if needed
-   - Follow the coding standards (see below)
-
-4. **Test your changes**
-
-   ```bash
-   make restow          # Refresh symlinks
-   make run-hooks       # Run pre-commit checks
-   make status          # Verify installation
-   ```
-
-5. **Commit your changes**
-
-   ```bash
-   git add .
-   git commit -m "feat: add new AI agent for X"
-   ```
-
-   Follow [Conventional Commits](https://www.conventionalcommits.org/):
-   - `feat:` - New feature
-   - `fix:` - Bug fix
-   - `docs:` - Documentation changes
-   - `style:` - Formatting changes
-   - `refactor:` - Code refactoring
-   - `test:` - Adding tests
-   - `chore:` - Maintenance tasks
-
-6. **Push to your fork**
-
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
 7. **Open a Pull Request**
 
 ## Pull Request Process
@@ -250,13 +208,7 @@ fix(skill): correct MCP builder syntax
 docs(readme): update installation instructions
 ```
 
-feat(agent): add payment integration agent
-fix(skill): correct MCP builder syntax
-docs(readme): update installation instructions
-
-```
-
-## Coding Standards <a name="coding-standards"></a>
+## Coding Standards
 
 ### Markdown Files
 
