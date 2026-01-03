@@ -1,0 +1,14 @@
+# Directory configuration
+--dir=./
+--target=~/.config/opencode
+
+# Ignore repository files
+--ignore=\.stowrc
+--ignore=\.DS_Store
+--ignore=\.git
+--ignore=\.gitignore
+--ignore=Makefile
+--ignore=README\.md
+
+# Show what's happening
+--verbose=1

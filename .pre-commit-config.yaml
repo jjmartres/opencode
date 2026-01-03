@@ -1,0 +1,146 @@
+repos:
+  - repo: local
+    hooks:
+      - id: check-superpowers-gitignore
+        name: Check superpowers in .gitignore
+        entry: bash
+        language: system
+        pass_filenames: false
+        always_run: true
+        args:
+          - -c
+          - |
+            if [ -d "opencode/superpowers" ] && ! grep -q "superpowers" .gitignore 2>/dev/null; then
+              echo "❌ ERROR: superpowers directory exists but not in .gitignore"
+              echo "   Fix with: make gitignore-superpowers"
+              exit 1
+            else
+              echo "✓ Superpowers exclusion verified"
+            fi
+
+      - id: check-stowrc-exists
+        name: Verify .stowrc exists
+        entry: bash
+        language: system
+        pass_filenames: false
+        always_run: true
+        args:
+          - -c
+          - |
+            if [ ! -f .stowrc ]; then
+              echo "⚠ WARNING: .stowrc not found"
+              exit 1
+            fi
+
+      - id: validate-makefile
+        name: Validate Makefile syntax
+        entry: bash
+        language: system
+        pass_filenames: false
+        files: ^Makefile$
+        args:
+          - -c
+          - |
+            make -n help > /dev/null 2>&1 || {
+              echo "❌ Makefile has syntax errors"
+              exit 1
+            }
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        name: Trim trailing whitespace
+      - id: end-of-file-fixer
+        name: Fix end of files
+      - id: check-yaml
+        name: Check YAML syntax
+        exclude: ^opencode/superpowers/
+      - id: check-added-large-files
+        name: Check for large files
+        args: ["--maxkb=1000"]
+      - id: check-merge-conflict
+        name: Check for merge conflicts
+      - id: detect-private-key
+        name: Detect private keys
+      - id: mixed-line-ending
+        name: Fix mixed line endings
+        args: ["--fix=lf"]
+
+  # Markdown linting
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.39.0
+    hooks:
+      - id: markdownlint
+        name: Lint markdown files
+        args: ["--fix"]
+        exclude: ^opencode/superpowers/
+
+  # Shell script linting
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.9.0.6
+    hooks:
+      - id: shellcheck
+        name: Lint shell scripts
+        args: ["--severity=warning"]
+        exclude: ^opencode/superpowers/
+
+  # JSON validation (excluding JSONC)
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-json
+        name: Check JSON syntax
+        exclude: \.jsonc$
+
+  # JSONC validation
+  - repo: local
+    hooks:
+      - id: validate-jsonc
+        name: Validate JSONC (JSON with Comments)
+        entry: bash
+        language: system
+        files: \.jsonc$
+        pass_filenames: true
+        args:
+          - -c
+          - |
+            # Check if we have node
+            if ! command -v node >/dev/null 2>&1; then
+              echo "⚠ Node.js not found, skipping JSONC validation"
+              exit 0
+            fi
+
+            for file in "$@"; do
+              echo "Validating $file..."
+
+              # Use Node.js to validate JSONC
+              node -e "
+                const fs = require('fs');
+                const path = require('path');
+                const filepath = process.argv[1];
+
+                try {
+                  const content = fs.readFileSync(filepath, 'utf8');
+
+                  // Remove single-line comments
+                  let stripped = content.replace(/\/\/.*$/gm, '');
+
+                  // Remove multi-line comments
+                  stripped = stripped.replace(/\/\*[\s\S]*?\*\//g, '');
+
+                  // Remove trailing commas (JSONC allows them)
+                  stripped = stripped.replace(/,(\s*[}\]])/g, '\$1');
+
+                  // Try to parse
+                  JSON.parse(stripped);
+                  console.log('✓ Valid JSONC');
+                  process.exit(0);
+                } catch (err) {
+                  console.error('✗ Invalid JSONC:');
+                  console.error('  File:', filepath);
+                  console.error('  Error:', err.message);
+                  process.exit(1);
+                }
+              " "$file" || exit 1
+            done
