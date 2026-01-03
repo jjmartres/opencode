@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-    <strong>Personal OpenCode configuration with curated agents, skills, MCP servers, plugins, rules, and themes.</strong>
+    <strong>Jumpstart your Opencode environment with this pre-built configuration. It includes a variety of agents, commands, skills, themes and MCP servers definitions, all ready for you to use and customize. Spend less time configuring and more time automating."</strong>
 </p>
 
 <p align="center">
