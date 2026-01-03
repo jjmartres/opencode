@@ -16,6 +16,7 @@
 ## Table of Contents
 
 - [Features](#features)
+- [Documentation](#documentation)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
