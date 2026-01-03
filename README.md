@@ -36,6 +36,13 @@
 - **Automated Installation**: Uses GNU Stow or symlinks for easy deployment
 - **Pre-commit Hooks**: Automatic validation and linting
 
+## Documentation
+
+- **[Agents](./docs/AGENTS.md)**: Detailed list of all available AI agents.
+- **[Commands](./docs/COMMANDS.md)**: Comprehensive list of all available commands.
+- **[Skills](./docs/SKILLS.md)**: Detailed list of all available skills.
+- **[Rules](./docs/RULES.md)**: Coding rules and best practices.
+
 ## Prerequisites
 
 - [OpenCode](https://opencode.ai) - AI-powered code editor
