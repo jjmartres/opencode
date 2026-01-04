@@ -10,3 +10,4 @@ This file provides a comprehensive list of all the commands available in the Ope
 | /test | Run tests with coverage |
 | /review | Review recent changes |
 | /memory-bank | Manage memory banks |
+| /documentation | Update documentation |

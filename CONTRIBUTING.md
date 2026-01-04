@@ -265,7 +265,6 @@ opencode/
 ├── agent/                 # AI agent definitions by category
 ├── command/              # Custom commands
 ├── mcp/                  # MCP server configurations
-├── plugin/               # OpenCode plugins
 ├── rules/                # Coding rules and best practices
 ├── skill/                # Reusable skills with examples
 └── themes/               # UI themes
@@ -283,7 +282,7 @@ Repository root:
 
 - Use **kebab-case** for file names: `payment-integration.md`
 - Use **descriptive names**: `customer-success-manager.md` not `csm.md`
-- Add category prefixes where applicable: `01-software-development/`
+- Add category prefixes where applicable: `01-core/`
 
 ## Testing Your Changes
 

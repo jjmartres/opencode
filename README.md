@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/jjmartres/smartplaylist/issues"><img src="https://img.shields.io/github/issues/jjmartres/smartplaylist" alt="GitHub Issues"/></a>
-    <a href="https://github.com/jjmartres/smartplaylist/pulls"><img src="https://img.shields.io/github/issues-pr/jjmartres/smartplaylist" alt="GitHub Pull Requests"/></a>
+    <a href="https://github.com/jjmartres/smartplaylist/issues"><img src="https://img.shields.io/github/issues/jjmartres/opencode" alt="GitHub Issues"/></a>
+    <a href="https://github.com/jjmartres/smartplaylist/pulls"><img src="https://img.shields.io/github/issues-pr/jjmartres/opencode" alt="GitHub Pull Requests"/></a>
 </p>
 
 ---
@@ -31,7 +31,6 @@
 - **Agents**: Specialized AI agents for various domains (payment integration, customer success, etc.)
 - **Skills**: Reusable skill definitions for common workflows
 - **MCP Servers**: Model Context Protocol server configurations
-- **Plugins**: Custom OpenCode plugins
 - **Rules**: Coding rules and best practices
 - **Themes**: Custom themes for OpenCode
 - **Automated Installation**: Uses GNU Stow or symlinks for easy deployment
@@ -180,12 +179,18 @@ make uninstall-all         # Remove everything
 ```
 opencode/
 ├── agent/                 # AI agent definitions
-│   ├── 01-software-development/
+│   ├── 01-core/
+│   ├── 02-languages/
+│   ├── 03-infrastructure/
+│   ├── 04-quality-and-security/
+│   ├── 05-data-ai/
+│   ├── 06-developer-experience/
 │   ├── 07-specialized-domains/
-│   └── 08-business-product/
+│   ├── 08-business-product/
+│   ├── 09-meta-orchestration/
+│   └── 10-curiosity/
 ├── command/              # Custom commands
 ├── mcp/                  # MCP server configurations
-├── plugin/               # OpenCode plugins
 ├── rules/                # Coding rules and standards
 ├── skill/                # Reusable skills
 │   ├── mcp-builder/
