@@ -7,8 +7,10 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/jjmartres/smartplaylist/issues"><img src="https://img.shields.io/github/issues/jjmartres/opencode" alt="GitHub Issues"/></a>
-    <a href="https://github.com/jjmartres/smartplaylist/pulls"><img src="https://img.shields.io/github/issues-pr/jjmartres/opencode" alt="GitHub Pull Requests"/></a>
+    <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+    <a href="https://github.com/jjmartres/opencode"><img src="https://img.shields.io/github/last-commit/jjmartres/opencode?label=Last%20update&style=flat-square" alt="Last Update" /></a>
+    <a href="https://github.com/jjmartres/opencode/issues"><img src="https://img.shields.io/github/issues/jjmartres/opencode" alt="GitHub Issues"/></a>
+    <a href="https://github.com/jjmartres/opencode/pulls"><img src="https://img.shields.io/github/issues-pr/jjmartres/opencode" alt="GitHub Pull Requests"/></a>
 </p>
 
 ---
