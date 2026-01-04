@@ -1,0 +1,3 @@
+[submodule "opencode/skill/reachy-mini-sdk"]
+	path = opencode/skill/reachy-mini-sdk
+	url = https://github.com/jjmartres/reachy-mini-sdk-skill
