@@ -1,10 +1,17 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "catppuccin",
-  "autoupdate": true,
-  "model": "google-vertex/gemini-2.5-pro",
-  "small_model": "google-vertex/gemini-2.5-flash",
-  "instructions": ["rules/*.md"],
+  "model": "google-vertex/gemini-3-pro-preview",
+  "small_model": "openrouter/gpt-5-1-codex-mini",
+  "enabled_providers": ["google-vertex", "openrouter"],
+  // "enabled_models": {
+  //   "google-vertex": ["gemini-3*", "gemini-2*"],
+  //   "openrouter": [
+  //     "gpt-5.*-codex-*",
+  //     "claude-sonnet-4-5*",
+  //     "grok-code-fast*",
+  //     "glm-4.7",
+  //   ],
+  // },
   "provider": {
     "google-vertex": {
       "models": {
@@ -23,36 +30,14 @@
         "location": "{env:VERTEXAI_REGION}",
       },
     },
-    "google-vertex-anthropic": {
-      "models": {
-        "claude-opus-4-1": {
-          "temperature": true,
-        },
-        "claude-sonnet-4-5": {
-          "temperature": true,
-        },
-      },
-      "options": {
-        "project": "{env:VERTEXAI_PROJECT_ID}",
-        "location": "{env:VERTEXAI_REGION}",
-      },
-    },
-    "anthropic": {
-      "models": {
-        "claude-opus-4-1": {
-          "temperature": true,
-        },
-        "claude-sonnet-4-5": {
-          "temperature": true,
-        },
-      },
-      "options": {
-        "apiKey": "{env:ANTHROPIC_API_KEY}",
-      },
-    },
   },
+  "default_agent": "plan",
+  "theme": "catppuccin",
+  "autoupdate": true,
+  "instructions": ["rules/*.md"],
   // WARNING: this is a security risk, do not share sessions with anyone automatically.
   "share": "manual",
+  "plugin": ["@franlol/opencode-md-table-formatter"],
   "mcp": {
     "docker": {
       "type": "local",
