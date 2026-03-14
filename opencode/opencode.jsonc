@@ -32,7 +32,6 @@
     },
   },
   "default_agent": "plan",
-  "theme": "catppuccin",
   "autoupdate": true,
   "instructions": ["rules/*.md"],
   // WARNING: this is a security risk, do not share sessions with anyone automatically.
@@ -42,65 +41,6 @@
     "docker": {
       "type": "local",
       "command": ["uvx", "docker-mcp"],
-      "enabled": false,
-    },
-    "kubernetes": {
-      "type": "local",
-      "command": ["npx", "-y", "kubernetes-mcp-server@latest"],
-      "enabled": false,
-    },
-    "datadog": {
-      "type": "local",
-      "command": ["npx", "-y", "@winor30/mcp-server-datadog"],
-      "enabled": false,
-      "environment": {
-        "DATADOG_API_KEY": "{env:DATADOG_API_KEY}",
-        "DATADOG_APP_KEY": "{env:DATADOG_APP_KEY}",
-        "DATADOG_SITE": "{env:DATADOG_SITE}",
-      },
-    },
-    "gitlab": {
-      "type": "local",
-      "command": [
-        "docker",
-        "run",
-        "-i",
-        "--rm",
-        "--pull=always",
-        "-e",
-        "GITLAB_TOKEN",
-        "registry.gitlab.com/fforster/gitlab-mcp:latest",
-      ],
-      "environment": {
-        "GITLAB_TOKEN": "{env:GITLAB_TOKEN}",
-      },
-      "enabled": false,
-    },
-    "github": {
-      "type": "local",
-      "command": [
-        "docker",
-        "run",
-        "-i",
-        "--rm",
-        "--pull=always",
-        "-e",
-        "GITHUB_PERSONAL_ACCESS_TOKEN",
-        "ghcr.io/github/github-mcp-server",
-      ],
-      "environment": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}",
-      },
-      "enabled": false,
-    },
-    "atlassian": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "mcp-remote",
-        "https://mcp.atlassian.com/v1/sse",
-      ],
       "enabled": false,
     },
     "smartplaylist": {
