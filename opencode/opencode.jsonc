@@ -1,8 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "google-vertex/gemini-3-pro-preview",
-  "small_model": "openrouter/gpt-5-1-codex-mini",
-  "enabled_providers": ["google-vertex", "openrouter"],
+  "model": "google-vertex/gemini-3.1-pro-preview",
+  "small_model": "google-vertex/gemini-2.5-flash",
+  "enabled_providers": ["google-vertex", "openrouter", "anthropic"],
   // "enabled_models": {
   //   "google-vertex": ["gemini-3*", "gemini-2*"],
   //   "openrouter": [
@@ -21,13 +21,29 @@
         "gemini-2.5-pro": {
           "temperature": true,
         },
-        "gemini-3-pro-preview": {
+        "gemini-3.1-pro-preview": {
           "temperature": true,
         },
       },
       "options": {
         "project": "{env:VERTEXAI_PROJECT_ID}",
         "location": "{env:VERTEXAI_REGION}",
+      },
+    },
+    "anthropic": {
+      "models": {
+        "claude-opus-4-6": {
+          "temperature": true,
+        },
+        "claude-sonnet-4-6": {
+          "temperature": true,
+        },
+        "claude-haiku-4-5": {
+          "temperature": true,
+        },
+      },
+      "options": {
+        "apiKey": "{env:ANTHROPIC_API_KEY}",
       },
     },
   },
@@ -38,11 +54,6 @@
   "share": "manual",
   "plugin": ["@franlol/opencode-md-table-formatter"],
   "mcp": {
-    "docker": {
-      "type": "local",
-      "command": ["uvx", "docker-mcp"],
-      "enabled": false,
-    },
     "smartplaylist": {
       "type": "remote",
       "url": "http://personal.local:8000/mcp",

@@ -191,3 +191,4 @@ opencode/package.json
 opencode/bun.lock
 
 opencode/command/next-sprint-design.md
+opencode/command/fix-renovate-mr.md
