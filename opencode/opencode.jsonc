@@ -3,15 +3,6 @@
   "model": "google-vertex/gemini-3.1-pro-preview",
   "small_model": "google-vertex/gemini-2.5-flash",
   "enabled_providers": ["google-vertex", "openrouter", "anthropic", "omlx"],
-  // "enabled_models": {
-  //   "google-vertex": ["gemini-3*", "gemini-2*"],
-  //   "openrouter": [
-  //     "gpt-5.*-codex-*",
-  //     "claude-sonnet-4-5*",
-  //     "grok-code-fast*",
-  //     "glm-4.7",
-  //   ],
-  // },
   "provider": {
     "google-vertex": {
       "models": {
@@ -66,15 +57,29 @@
             "output": 32768,
           },
         },
+        "Qwen3-Coder-30B-A3B-Instruct-MLX-4bit": {
+          "name": "Qwen3-Coder-30B-A3B-Instruct-MLX-4bit",
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"],
+          },
+          "limit": {
+            "context": 32768,
+            "output": 32768,
+          },
+        },
       },
     },
   },
   "default_agent": "plan",
   "autoupdate": true,
   "instructions": ["rules/*.md"],
-  // WARNING: this is a security risk, do not share sessions with anyone automatically.
-  "share": "manual",
-  "plugin": ["@franlol/opencode-md-table-formatter"],
+  "share": "disabled",
+  "plugin": [
+    "@franlol/opencode-md-table-formatter@latest",
+    "opencode-websearch-cited@1.2.0",
+    "@mohak34/opencode-notifier@latest",
+  ],
   "mcp": {
     "smartplaylist": {
       "type": "remote",

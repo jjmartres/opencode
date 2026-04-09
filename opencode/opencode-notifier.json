@@ -1,0 +1,119 @@
+{
+  "sound": true,
+  "notification": true,
+  "bell": false,
+  "timeout": 5,
+  "showProjectName": true,
+  "showSessionTitle": true,
+  "showIcon": false,
+  "suppressWhenFocused": true,
+  "enableOnDesktop": false,
+  "notificationSystem": "osascript",
+  "linux": {
+    "grouping": false
+  },
+  "command": {
+    "enabled": false,
+    "path": "/path/to/command",
+    "args": ["--event", "{event}", "--message", "{message}"],
+    "minDuration": 0
+  },
+  "events": {
+    "permission": {
+      "sound": true,
+      "notification": true,
+      "command": true,
+      "bell": false
+    },
+    "complete": {
+      "sound": true,
+      "notification": true,
+      "command": true,
+      "bell": false
+    },
+    "subagent_complete": {
+      "sound": false,
+      "notification": false,
+      "command": true,
+      "bell": false
+    },
+    "error": {
+      "sound": true,
+      "notification": true,
+      "command": true,
+      "bell": false
+    },
+    "question": {
+      "sound": true,
+      "notification": true,
+      "command": true,
+      "bell": false
+    },
+    "user_cancelled": {
+      "sound": false,
+      "notification": false,
+      "command": true,
+      "bell": false
+    },
+    "plan_exit": {
+      "sound": true,
+      "notification": true,
+      "command": true,
+      "bell": false
+    },
+    "session_started": {
+      "sound": true,
+      "notification": false,
+      "command": true,
+      "bell": false
+    },
+    "user_message": {
+      "sound": true,
+      "notification": false,
+      "command": true,
+      "bell": false
+    },
+    "client_connected": {
+      "sound": true,
+      "notification": false,
+      "command": true,
+      "bell": false
+    }
+  },
+  "messages": {
+    "permission": "Session needs permission: {sessionTitle}",
+    "complete": "Session has finished: {sessionTitle}",
+    "subagent_complete": "Subagent task completed: {sessionTitle}",
+    "error": "Session encountered an error: {sessionTitle}",
+    "question": "Session has a question: {sessionTitle}",
+    "user_cancelled": "Session was cancelled by user: {sessionTitle}",
+    "plan_exit": "Plan ready for review: {sessionTitle}",
+    "session_started": "Session started: {sessionTitle}",
+    "user_message": "User sent a message: {sessionTitle}",
+    "client_connected": "OpenCode connected"
+  },
+  "sounds": {
+    "permission": null,
+    "complete": null,
+    "subagent_complete": null,
+    "error": null,
+    "question": null,
+    "user_cancelled": null,
+    "plan_exit": null,
+    "session_started": null,
+    "user_message": null,
+    "client_connected": null
+  },
+  "volumes": {
+    "permission": 1,
+    "complete": 1,
+    "subagent_complete": 1,
+    "error": 1,
+    "question": 1,
+    "user_cancelled": 1,
+    "plan_exit": 1,
+    "session_started": 1,
+    "user_message": 1,
+    "client_connected": 1
+  }
+}
