@@ -24,7 +24,6 @@
 - [Usage](#usage)
 - [Configuration Structure](#configuration-structure)
 - [Development](#development)
-- [Superpowers Extension](#superpowers-extension)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -101,9 +100,6 @@ make install
 
 # (Optional) Install pre-commit hooks
 make install-hooks
-
-# (Optional) Install Superpowers extension
-make install-superpowers
 ```
 
 ### What Gets Installed
@@ -160,19 +156,13 @@ make status                 # Show installation status
 make list                   # List available packages
 make clean                  # Remove broken symlinks
 
-# Superpowers Extension
-make install-superpowers    # Install obra's superpowers
-make update-superpowers     # Update superpowers to latest
-make uninstall-superpowers  # Remove superpowers
-make superpowers-status     # Check superpowers installation
-
 # Pre-commit Hooks
 make install-hooks          # Install pre-commit hooks
 make run-hooks             # Run hooks manually
 make update-hooks          # Update hooks to latest versions
 
 # Combined Operations
-make install-all           # Install config + superpowers
+make install-all           # Install config + hooks
 make uninstall-all         # Remove everything
 ```
 
@@ -231,32 +221,6 @@ git pull origin main
 # Refresh symlinks
 make restow
 ```
-
-## Superpowers Extension
-
-[Superpowers](https://github.com/obra/superpowers) is a powerful extension that enhances OpenCode with additional capabilities.
-
-### Installation
-
-```bash
-make install-superpowers
-```
-
-This clones the superpowers repository to `~/.config/opencode/superpowers` and automatically adds it to `.gitignore` to prevent accidental commits.
-
-### Updating Superpowers
-
-```bash
-# Update to latest version
-make update-superpowers
-
-# Check current status
-make superpowers-status
-```
-
-### Manual Installation
-
-For detailed installation instructions, see the [official INSTALL guide](https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md).
 
 ## Troubleshooting
 
@@ -337,7 +301,6 @@ MIT License - see [LICENSE](LICENSE) file for details
 ## Acknowledgments
 
 - [OpenCode](https://opencode.ai) - The AI-powered code editor
-- [Superpowers](https://github.com/obra/superpowers) - Extension by obra
 - [GNU Stow](https://www.gnu.org/software/stow/) - Symlink farm manager
 - All our [contributors](https://github.com/jjmartres/opencode/graphs/contributors)
 
