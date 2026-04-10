@@ -45,28 +45,21 @@
         "apiKey": "{env:OMLX_API_KEY}",
       },
       "models": {
-        "gemma-4-26b-a4b-it-4bit": {
-          "name": "gemma-4-26b-a4b-it-4bit",
+        "Qwen3.5-9B-MLX-4bit": {
+          "name": "Qwen3.5-9B-MLX-4bit",
           "modalities": {
             "input": ["text", "image"],
             "output": ["text"],
           },
           "attachment": true,
-          "limit": {
-            "context": 32768,
-            "output": 32768,
-          },
         },
-        "Qwen3-Coder-30B-A3B-Instruct-MLX-4bit": {
-          "name": "Qwen3-Coder-30B-A3B-Instruct-MLX-4bit",
+        "gemma-4-e4b-it-8bit": {
+          "name": "gemma-4-e4b-it-8bit",
           "modalities": {
-            "input": ["text"],
+            "input": ["text", "image"],
             "output": ["text"],
           },
-          "limit": {
-            "context": 32768,
-            "output": 32768,
-          },
+          "attachment": true,
         },
       },
     },
