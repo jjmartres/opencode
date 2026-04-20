@@ -2,6 +2,13 @@
   <a href="https://opencode.ai"><img src="opencode-logo.png" alt="Opencode logo"></a>
 </div>
 
+> [!WARNING]
+> **🚨 REPOSITORY ARCHIVED AND MOVED 🚨**
+>
+> **This project is now archived and closed.** All future development, updates, and content have been moved to a new repository.
+>
+> Please visit our new home: **[https://github.com/jjmartres/ai-coding-agents](https://github.com/jjmartres/ai-coding-agents)**
+
 <p align="center">
     <strong>Jumpstart your Opencode environment with this pre-built configuration. It includes a variety of agents, commands, skills, themes and MCP servers definitions, all ready for you to use and customize. Spend less time configuring and more time automating.</strong>
 </p>

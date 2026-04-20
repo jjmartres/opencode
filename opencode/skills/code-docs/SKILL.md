@@ -1,8 +1,6 @@
 ---
 name: code-docs
 description: Apply Google Style documentation standards to Python, Go, and Terraform code. Use when writing or reviewing code that needs docstrings/comments, when asked to "document this code", "add docstrings", "follow Google Style", or when improving code documentation quality. Supports Python docstrings, Go comments, and Terraform variable/output descriptions. Enforces consistent, professional documentation standards.
-license: MIT
-compatibility: opencode
 ---
 
 # Code Documentation Standards
